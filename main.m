@@ -11,7 +11,7 @@ close all
 [th_LQR, F_LQR] = LQR_pendulum();
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-TrainingIters = [0;0;0;0]; % Compare various training iterations
+TrainingIters = [100;500;1000;5000]; % Compare various training iterations
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 figure % Figure to compare LQR data and Neural Net
@@ -44,8 +44,8 @@ thvec_data = 0:.01:2*pi;
 Fvec_data = sin(thvec_data);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-TrainingIters = [0;0;0;0]; % Compare various training iterations
-HLNeurons = 1;
+TrainingIters = [10;50;100;500]; % Compare various training iterations
+HLNeurons = 100;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 figure % Figure to compare input data and Neural Net

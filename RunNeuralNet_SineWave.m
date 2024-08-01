@@ -8,10 +8,11 @@ b3 = B{3};
 %% Forward Propogation
 o = [];
 for i = 1:length(InputValue)
-z1 = ;
-H1 = ;
-z2 = ;
-H2 = ;
-z3 = ;
-o(i) = ;
+z1 = w1.*(InputValue(i)) + b1;
+H1 = max(0,z1);
+z2 = w2*H1 + b2;
+H2 = max(0,z2);
+z3 = w3'*H2 + b3;
+o = z3;
+o(i) = z3;
 end
