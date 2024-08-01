@@ -18,6 +18,7 @@ figure % Figure to compare LQR data and Neural Net
 
 % Plot LQR data
 plot(th_LQR,F_LQR,'Linewidth',5) 
+
 for i =1:length(TrainingIters)
 [W, B] = CreateNeuralNet_LQR(th_LQR, F_LQR,TrainingIters(i)); % Create NN
 hold on
@@ -25,6 +26,7 @@ hold on
 % Plot NN Results
 plot(th_LQR,RunNeuralNet_LQR(th_LQR, W, B),'Linewidth',1.5) % Run NN
 end
+
 title('Data vs Neural Net')
 legend('Input/Output Data LQR', 'Neural Net: 100 iterations', ...
     'Neural Net: 500 iterations','Neural Net: 1000 iterations', ...
